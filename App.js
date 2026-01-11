@@ -1,21 +1,16 @@
 function App() {
-  const products = [
-    { id: 1, name: "Mobile", price: 80000 },
-    { id: 2, name: "Pen", price: 100 }
+  const users = [
+    { id: 1, name: "Ali", age: 17 },
+    { id: 2, name: "Sara", age: 22 }
   ];
 
   return (
     <div>
-      <h2>Products</h2>
+      <h2>User Status</h2>
 
-      {products.map((product) => (
-        <p
-          key={product.id}
-          style={{
-            color: product.price > 1000 ? "green" : "red"
-          }}
-        >
-          {product.name} - Rs {product.price}
+      {users.map((user) => (
+        <p key={user.id}>
+          {user.name} - {user.age >= 18 ? "Adult" : "Minor"}
         </p>
       ))}
     </div>
